@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio Generator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Portfolio Generator</h1>
+
+<div class="form-box">
+
+  <input type="text" id="name" placeholder="Your Name">
+<input type="file" id="photo" accept="image/*" onchange="previewPhoto()">
+  <input type="text" id="role" placeholder="Your Role">
+
+  <input type="email" id="email" placeholder="Your Email">
+
+  <textarea id="skills" placeholder="Your Skills (comma separated)"></textarea>
+  <textarea id="experience" placeholder="Experience (Eg: Intern at XYZ, 2024)"></textarea>
+
+<textarea id="education" placeholder="Education (Eg: BSc Computer Science, 2023)"></textarea>
+<select id="template">
+  <option value="simple">Simple</option>
+  <option value="dark">Dark</option>
+  <option value="modern">Modern</option>
+</select>
+
+  <button onclick="generate()">Generate Portfolio</button>
+<button onclick="downloadPDF()">Download PDF</button>
+<h3>Saved Profiles (Tap to Load / Long Press to Delete)</h3>
+
+
+<!-- OUTPUT -->
+
+<div id="result"></div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
